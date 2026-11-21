@@ -1,0 +1,108 @@
+body {
+  background: linear-gradient(120deg, #ffe29f 0%, #ffa751 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+.playa-container {
+  max-width: 520px;
+  margin: 2rem auto;
+  background: #fffbe8;
+  padding: 2rem 2.2rem 1.5rem 2.2rem;
+  border-radius: 24px;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.13);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  border: 4px solid #ffe29f;
+}
+h2 {
+  text-align: center;
+  color: #2386a6;
+  text-shadow: 1px 1px 5px #ffa751;
+  font-size: 2.3em;
+  margin-bottom: 1.2em;
+  letter-spacing: 0.03em;
+}
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+.calendar-header button {
+  padding: 0.3rem 0.7rem;
+  font-size: 1.2rem;
+  background: #ffe29f;
+  color: #2386a6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #ffd78288;
+  transition: background 0.2s;
+}
+.calendar-header button:hover {
+  background: #ffd782;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 1em;
+}
+.calendar-day {
+  padding: 1.1rem 0 0.7rem 0;
+  text-align: center;
+  border-radius: 12px;
+  background: #c1f7ff;
+  position: relative;
+  margin-bottom: 3px;
+  font-size: 1.15em;
+  border: 2px solid #ffa751;
+  box-shadow: 0 1px 8px #ffa75133;
+  transition: background 0.3s;
+  cursor: default;
+}
+
+.calendar-day.occupied {
+  background: linear-gradient(120deg, #ffd782 70%, #ffe29f 100%);
+  color: #2386a6;
+  font-weight: bold;
+  border: 2px solid #2386a6;
+  box-shadow: 0 2px 12px #2386a666;
+  animation: playaPop 0.5s;
+}
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.calendar-day .icon-playa {
+  font-size: 2em;
+  display: block;
+  margin-top: 0.25em;
+  margin-bottom: -0.2em;
+  filter: drop-shadow(0 2px 2px #ffa75177);
+  animation: playaPop 0.5s;
+}
+@keyframes playaPop {
+  0% { transform: scale(0.7) rotate(-10deg);}
+  80% { transform: scale(1.15) rotate(8deg);}
+  100% { transform: scale(1) rotate(0);}
+}
+.icon-leyenda {
+  margin-top: 1.2em;
+  font-size: 1em;
+  color: #2386a6;
+  display: flex;
+  gap: 1.2em;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.icon-leyenda-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+.icon-leyenda-item .icon {
+  font-size: 1.3em;
+}

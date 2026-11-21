@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antonella Beach House — Calendario</title>
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+ 
+ 
+  <body>
+  <main class="wrap">
+
+    <!-- Formulario de selección -->
+    <section class="search-card">
+      <div class="fields">
+        <div class="select-wrap"><select id="month" class="select"></select></div>
+        <div class="select-wrap"><select id="year" class="select"></select></div>
+      </div>
+    </section>
+
+    <!-- Calendario -->
+    <section class="calendar-card">
+      <div class="calendar-wrapper"> <!-- ✅ Nuevo contenedor para responsive -->
+        <h4 id="calendarTitle" class="month-title">Cargando…</h4>
+        <div id="calendarGrid" class="calendar"></div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <p>✨ ¡Vive la experiencia Antonella Beach House! Reserva o pregúntanos disponibilidad hoy. ✨</p>
+      
+      <a class="btn" id="ctaBtn" href="https://antonellabeachform.netlify.app/" target="_blank" rel="noopener">
+        Quiero consultar / reservar
+      </a>
+
+      <!-- SVG del cangrejo -->
+      <div class="crab-container">
+          <span class="iconify crab" data-icon="twemoji:crab" id="mainIcon" data-inline="false"></span>
+          <script>
+            // En diciembre: arbolito de navidad en vez de cangrejo
+            if (new Date().getMonth() === 11) {
+              document.getElementById("mainIcon").setAttribute("data-icon", "twemoji:christmas-tree");
+            }
+          </script>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+  <script src="script.js"></script>
+ 
+</body>
+</html>
